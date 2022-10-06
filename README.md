@@ -25,7 +25,7 @@ python3 check_zammad.py <args>
 You can run the script with the following arguments: 
 | argument                | Required | description                |
 | ----------------------- | -------- | -------------------------- |
-| `-h`                    | ✅        | Show help message and exit |
+| `-h`                    | ❌        | Show help message and exit |
 | `--server`   `<url>`    | ✅        | URL of Zammad instance     |
 | `--token`     `<token>` | ✅        | Token                      |
 
