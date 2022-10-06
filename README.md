@@ -40,7 +40,7 @@ You can get the token from here: https://zammad.example.org/#system/monitoring
 apply Service "zammadcheck" {
   import "generic-service"
   check_command = "check-zammad"
-  assign where host.name == "kitz-ithd"
+  assign where host.name == "zammad-server"
 }
 ```
 
