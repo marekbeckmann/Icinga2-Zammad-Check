@@ -1,0 +1,1 @@
+# Icinga2-Zammad-Check
