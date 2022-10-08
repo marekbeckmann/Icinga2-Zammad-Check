@@ -67,5 +67,4 @@ $ python3 check_zammad.py --server example.zammad.org --token 12345
 ```ini
 Zammad Health Message:
 Issues: No issues
-Actions: No actions
 ```

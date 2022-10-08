@@ -31,27 +31,19 @@ def check(server, token):
         zammad_data = json.loads(zammad_data)
         status = UNKNOWN
     except:
-        status = CRITICAL
+        status = WARNING
         message['summary'] = 'Zammad Health information retrieval failed!'
         return status
 
     health = zammad_data['healthy']
     issues = zammad_data['issues']
-    actions = zammad_data['actions']
-    if not issues:
-        issues = "No issues"
-    if not actions:
-        actions = "No actions"
 
     if health:
         status = OK
-        message['summary'] += '\nIssues: ' + issues
-        message['summary'] += '\nActions: ' + actions
-
     else:
-        status = WARNING
-        message['summary'] += '\nIssues: ' + issues
-        message['summary'] += '\nActions: ' + actions
+        status = CRITICAL
+
+    message['summary'] += '\nIssues: '.join(issues)
     return status
 
 
