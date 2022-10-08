@@ -25,7 +25,7 @@ python3 check_zammad.py <args>
 You can run the script with the following arguments: 
 | argument                | Required | description                |
 | ----------------------- | -------- | -------------------------- |
-| `-h`                    | ✅        | Show help message and exit |
+| `-h`                    | ❌        | Show help message and exit |
 | `--server`   `<url>`    | ✅        | URL of Zammad instance     |
 | `--token`     `<token>` | ✅        | Token                      |
 
@@ -40,7 +40,7 @@ You can get the token from here: https://zammad.example.org/#system/monitoring
 apply Service "zammadcheck" {
   import "generic-service"
   check_command = "check-zammad"
-  assign where host.name == "kitz-ithd"
+  assign where host.name == "zammad-server"
 }
 ```
 
